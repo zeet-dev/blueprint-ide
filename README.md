@@ -1,34 +1,23 @@
-# Rich Input Schema Example
+# Blueprint IDE
 
-This repo contains an example of a rich input schema for a custom blueprint. A rich input schema allows you to define a custom input form for your blueprint, which is useful when you want to provide a custom user experience or guide rails for your blueprint.
+This repo sets up a Blueprint IDE for you to use to forge your custom Blueprints. This can also be super helpful if you're looking to store your Blueprint definitions in a Git repo.
 
 ## Usage
 
-If you're launching this repo in VS Code, it will automatically pull in the rich input schema validation from this [JSON schema definition](https://anchor.zeet.co/static/schemas/blueprint-rich-input-schema.schema.json).
+If you're launching this repo in VS Code, it will automatically pull in the rich input schema validation from this [JSON schema definition](https://anchor.zeet.co/static/schemas/blueprint-rich-input-schema.schema.json). Highly recommended!
 
-## Example
+This environment requires Node.js 20 or higher. You can use ASDF to quickly install the proper Node.js version. After that's complete, run `npm install` to install the required dependencies.
 
-To update your blueprint with a rich input schema, you'll want to create a new blueprint JSON, and then run a GraphQL mutation to update the blueprint with the new schema.
+You'll also want to copy the `.env.template` file to `.env` and add your `ZEET_API_KEY`. You can generate an API key here: https://zeet.co/account/api
 
-Running this operation:
+## Developing a Blueprint
 
-```graphql
-mutation updateBlueprint($id: UUID!, $input: UpdateBlueprintInput!) {
-  updateBlueprint(blueprintID: $id, input: $input) {
-    id
-  }
-}
-```
+Blueprints in the `./blueprints` folder will get picked up by the `npm run apply` command (except for the `example.json` Blueprint). You can use the `example.json` file as a starting point for your own Blueprints.
 
-With these variables (make sure to stringify the JSON object for the `richInputSchema` field):
+To update your own Blueprints, add a new JSON file to the `./blueprints` folder, and name it in this format: `{BLUEPRINT_ID}.json`. For example, if your Blueprint ID is `c06f95b5-17ce-44a3-8893-4d5881fcc7ea`, then your file should be named `c06f95b5-17ce-44a3-8893-4d5881fcc7ea.json`. This will enable the `npm run apply` command to pick up your Blueprint and properly apply it to your Zeet account.
 
-```json
-{
-  "id": "YOUR_BLUEPRINT_ID",
-  "input": {
-    "richInputSchema": "[{\"id\":\"db_version\",\"name\":\"Version\",\"required\":true,\"description\":\"The database engine version\",\"options\":[\"Option #1\",\"Option #2\",\"Option #3\"],\"type\":\"STRING\"}]"
-  }
-}
-```
+Advanced inputs can be defined for a Blueprint using its `richInputSchema`. You can check out the more JSON schema for all valid input types here: https://anchor.zeet.co/static/schemas/blueprint-rich-input-schema.schema.json
 
-If all goes well, you will see your changes to your blueprint with the new rich input schema!
+## Applying a Blueprint
+
+Once you've updated a Blueprint to your liking, you can apply it to your Zeet account by running `npm run apply`. At this point you should be complete!
