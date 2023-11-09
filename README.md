@@ -1,6 +1,10 @@
 # Blueprint IDE
 
-This repo sets up a Blueprint IDE for you to use to forge your custom Blueprints. This can also be super helpful if you're looking to store your Blueprint definitions in a Git repo.
+This repo sets up a Blueprint IDE for you to use to forge your custom Blueprints. This can also be super helpful if you're looking to store your Blueprint definitions in a Git repo. [Watch a demo of how to use this repo](https://www.loom.com/share/f77529b8f0bd4aaf958ab8a7651cd4ab):
+
+<a href="https://www.loom.com/share/f77529b8f0bd4aaf958ab8a7651cd4ab?sid=65466840-67b1-4ea2-8a03-815d9c58a3a1">
+<img width="744" alt="Screenshot 2023-11-09 at 13 17 46" src="https://github.com/zeet-dev/blueprint-ide/assets/894178/fc4343a4-aab9-450f-b686-e87fddd9df19">
+</a>
 
 ## Usage
 
