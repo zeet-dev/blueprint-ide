@@ -1,16 +1,24 @@
 {
-  "displayName": "example-blueprint-name",
+  "displayName": "blueprint-ide-example",
   "richInputSchema": [
     {
+      "id": "string_input",
+      "name": "String Input",
+      "description": "An example tooltip",
+      "type": "STRING",
+      "default": "A default value",
+      "required": true
+    },
+    {
       "id": "terraform_variable_name",
-      "name": "Example Input",
+      "name": "String Input with Options",
       "type": "STRING",
       "options": ["Example #1", "Example #2", "Example #3"],
       "required": true
     },
     {
       "id": "terraform_variable_name_2",
-      "name": "Example Secret with Default Value",
+      "name": "String Input (secret with default value)",
       "type": "STRING",
       "default": "super_secret_password",
       "sensitive": true,
@@ -18,10 +26,71 @@
     },
     {
       "id": "terraform_variable_name_3",
-      "name": "Example Secret with Default Value",
+      "name": "String Input (secret with generated value)",
       "type": "STRING",
       "sensitive": true,
       "required": true
+    },
+    {
+      "id": "int_input",
+      "name": "Integer Input",
+      "default": 1,
+      "required": true,
+      "type": "INTEGER"
+    },
+    {
+      "id": "float_input",
+      "name": "Float Input",
+      "default": 2.5,
+      "required": true,
+      "type": "FLOAT"
+    },
+    {
+      "id": "bool_input",
+      "name": "Boolean Input",
+      "default": true,
+      "required": true,
+      "type": "BOOLEAN"
+    },
+    {
+      "id": "json_input",
+      "name": "JSON Input",
+      "default": "{\"foo\": \"bar\"}",
+      "required": true,
+      "type": "JSON"
+    },
+    {
+      "id": "yaml_input",
+      "name": "YAML Input",
+      "default": "foo: bar",
+      "required": true,
+      "type": "YAML"
+    },
+    {
+      "id": "group",
+      "name": "Environment Variables",
+      "type": "GROUP",
+      "required": true,
+      "variables": [
+        {
+          "id": "envs_input",
+          "name": "",
+          "default": [
+            {
+              "key": "KEY_NAME",
+              "value": "example_value",
+              "sensitive": false
+            },
+            {
+              "key": "PASSWORD",
+              "value": "sensitive_value",
+              "sensitive": true
+            }
+          ],
+          "required": true,
+          "type": "ENVIRONMENT_VARIABLES"
+        }
+      ]
     }
   ]
 }

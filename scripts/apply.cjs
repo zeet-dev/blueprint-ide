@@ -15,7 +15,7 @@ blueprintFiles.forEach(async (file) => {
     fs.readFileSync(path.join(blueprintDir, file), "utf8")
   );
   const blueprintId = file.split(".")[0];
-  console.info(`Updating blueprint ID ${blueprintId}...`);
+  console.info(`Applying changes to Blueprint ID ${blueprintId}...`);
 
   const document = gql`
     mutation updateBlueprint($id: UUID!, $input: UpdateBlueprintInput!) {
@@ -40,9 +40,9 @@ blueprintFiles.forEach(async (file) => {
       authorization: `Bearer ${process.env.ZEET_API_KEY}`,
     });
     console.info(
-      `\tUpdated complete: https://zeet.co/console/blueprints/${blueprintId}`
+      `\tApply complete: https://zeet.co/console/blueprints/${blueprintId}`
     );
   } catch (error) {
-    console.error("\tUpdate failed!", error);
+    console.error("\tApply failed!", error);
   }
 });
