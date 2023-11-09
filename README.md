@@ -20,6 +20,9 @@ To update your own Blueprints, add a new JSON file to the `./blueprints` folder,
 
 Advanced inputs can be defined for a Blueprint using its `richInputSchema`. You can check out the more JSON schema for all valid input types here: https://anchor.zeet.co/static/schemas/blueprint-rich-input-schema.schema.json
 
+<img width="1041" alt="Screenshot 2023-11-09 at 13 42 30" src="https://github.com/zeet-dev/blueprint-ide/assets/894178/373c0b4b-21ec-46e5-8e14-d333865cbfab">
+
+
 ## Applying a Blueprint
 
 Once you've updated a Blueprint to your liking, you can apply it to your Zeet account by running `npm run apply`. At this point you should be complete!
