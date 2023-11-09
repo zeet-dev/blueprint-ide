@@ -1,0 +1,27 @@
+{
+  "displayName": "example-blueprint-name",
+  "richInputSchema": [
+    {
+      "id": "terraform_variable_name",
+      "name": "Example Input",
+      "type": "STRING",
+      "options": ["Example #1", "Example #2", "Example #3"],
+      "required": true
+    },
+    {
+      "id": "terraform_variable_name_2",
+      "name": "Example Secret with Default Value",
+      "type": "STRING",
+      "default": "super_secret_password",
+      "sensitive": true,
+      "required": true
+    },
+    {
+      "id": "terraform_variable_name_3",
+      "name": "Example Secret with Default Value",
+      "type": "STRING",
+      "sensitive": true,
+      "required": true
+    }
+  ]
+}

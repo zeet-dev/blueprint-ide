@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/blueprints/*.json"],
+      "url": "./blueprint.schema.json"
+    }
+  ]
+}

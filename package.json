@@ -1,0 +1,23 @@
+{
+  "name": "blueprint-ide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "apply": "node scripts/apply.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeet-dev/rich-input-schema-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeet-dev/rich-input-schema-example/issues"
+  },
+  "homepage": "https://github.com/zeet-dev/rich-input-schema-example#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0"
+  }
+}
