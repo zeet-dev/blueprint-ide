@@ -18,7 +18,7 @@
     },
     {
       "id": "terraform_variable_name_3",
-      "name": "Example Secret with Default Value",
+      "name": "Example Secret with Generated Value",
       "type": "STRING",
       "sensitive": true,
       "required": true
