@@ -7,6 +7,12 @@
     },
     "displayName": {
       "type": "string"
+    },
+    "outputSchema": {
+      "type": "object"
+    },
+    "connectorSchema": {
+      "type": "object"
     }
   },
   "required": ["displayName", "richInputSchema"],

@@ -30,6 +30,8 @@ blueprintFiles.forEach(async (file) => {
     input: {
       displayName: blueprint.displayName,
       richInputSchema: JSON.stringify(blueprint.richInputSchema),
+      outputSchema: JSON.stringify(blueprint.outputSchema),
+      connectorSchema: JSON.stringify(blueprint.connectorSchema),
     },
   };
 

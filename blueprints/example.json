@@ -92,5 +92,54 @@
         }
       ]
     }
-  ]
+  ],
+  "outputSchema": {
+    "entries": [
+      {
+        "name": "InternalIP",
+        "type": "STRING",
+        "dataPath": "services.resource-name.spec.clusterIP",
+        "dataSource": "RESOURCE",
+        "displayName": "Cluster IP"
+      },
+      {
+        "name": "AnotherOutput",
+        "type": "STRING",
+        "dataPath": "services.resource-name.path-to-info-in-object-manifest",
+        "dataSource": "RESOURCE",
+        "displayName": "Another Output"
+      },
+      {
+        "name": "OutputFromInput",
+        "type": "STRING",
+        "dataPath": "input.path",
+        "dataSource": "INPUT",
+        "displayName": "Output From Input"
+      }
+    ]
+  },
+  "connectorSchema": {
+    "entries": [
+      {
+        "type": "DATABASE_CONNECTION",
+        "fields": [
+          {
+            "name": "InternalIP",
+            "displayName": "Connector Internal IP",
+            "type": "OUTPUT"
+          },
+          {
+            "name": "AnotherOutput",
+            "displayName": "Connector Another Output",
+            "type": "OUTPUT"
+          },
+          {
+            "name": "OutputFromInput",
+            "displayName": "Connector Ouput From Input",
+            "type": "OUTPUT"
+          }
+        ]
+      }
+    ]
+  }
 }
